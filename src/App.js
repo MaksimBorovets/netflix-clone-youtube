@@ -11,13 +11,14 @@ function App() {
   return (
     <>
       <AuthContextProvider>
+        <div style={{color: 'white'}}>Hello world</div>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route
-            path='/account'
+            path="/account"
             element={
               <ProtectedRoute>
                 <Account />
