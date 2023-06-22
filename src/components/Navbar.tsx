@@ -5,7 +5,7 @@ import { UserAuth } from '../context/AuthContext';
 const Navbar = () => {
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
-  // console.log(user.email)
+
 
   const handleLogout = async () => {
     try {

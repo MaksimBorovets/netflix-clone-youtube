@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
+
 import { AuthContextProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -11,7 +12,6 @@ function App() {
   return (
     <>
       <AuthContextProvider>
-        <div style={{color: 'white'}}>Hello world</div>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
