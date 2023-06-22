@@ -1,9 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import requests from '../Requests';
+
+import requests from '../requests';
+import { IMovie } from '../types';
 
 const Main = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<IMovie[]>([]);
 
   const movie = movies[Math.floor(Math.random() * movies.length)];
 
@@ -12,9 +14,9 @@ const Main = () => {
       setMovies(response.data.results);
     });
   }, []);
-  //   console.log(movie);
+    console.log('movie', movie);
 
-  const truncateString = (str, num) => {
+  const truncateString = (str:string, num:number) => {
     if (str?.length > num) {
       return str.slice(0, num) + '...';
     } else {
